@@ -1,0 +1,16 @@
+version: "3.1"
+
+services:
+  db:
+      image: mysql:latest
+      environment:
+        MYSQL_DATABASE: linkedin
+        MYSQL_ROOT_PASSWORD: Salman@1
+      ports:
+        - "3307:3306"
+
+  mailhog:
+    image: mailhog/mailhog
+    ports:
+      - "1025:1025"
+      - "8025:8025" #web UI for viewing emails
